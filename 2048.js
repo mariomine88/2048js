@@ -217,7 +217,7 @@ function filterZero(row){
 
 
 
-const swipeArea = document.body;
+const swipeArea = document.getElementById("swipearea");;
 let startX, startY, endX, endY;
 const threshold = 50; // Minimum distance required for a swipe
 
