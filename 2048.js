@@ -222,6 +222,7 @@ let startX, startY, endX, endY;
 const threshold = 50; // Minimum distance required for a swipe
 
 swipeArea.addEventListener('touchstart', (e) => {
+  e.preventDefault(); 
   startX = e.touches[0].clientX;
   startY = e.touches[0].clientY;
 });
