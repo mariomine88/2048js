@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2048 game">
+    <meta name="author" content="Biberia Mario">
+    <meta property="og:title" content="2048">
+    <meta property="og:description" content="2048 game">
+    <meta property="og:image" content="2048_logo.svg.png">
+    <meta property="og:url" content="https://mariomine88.github.io/2048js/"> 
+    <meta property="og:type" content="website">
     <title>2048</title>
     <link rel="stylesheet" href="2048.css">
     <script src="2048.js"></script>
 </head>
     <body>
-            <h1>2048</h1>
-            <hr>
-            <h2>score:<span id="score">0</span></h2>
-            <div id="board">
-            </div>
+        <h1>2048</h1>
+        <hr>
+        <h2>score:<span id="score">0</span></h2>
+        <div class="game">
+            <div class="game state"></div>
+            <div class="game board" id="board"></div>
+        </div>
     </body>
 </html>
