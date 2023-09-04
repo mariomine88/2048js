@@ -222,7 +222,8 @@ let startX, startY, endX, endY;
 const threshold = 50; // Minimum distance required for a swipe
 
 swipeArea.addEventListener('touchstart', (e) => {
-  e.preventDefault(); 
+    console.log('e');
+  e.preventDefault();
   startX = e.touches[0].clientX;
   startY = e.touches[0].clientY;
 });
@@ -242,6 +243,7 @@ swipeArea.addEventListener('touchend', () => {
     if (Math.abs(deltaX) >= threshold) {
       if (deltaX > 0) {
         updateGame("ArrowRight");
+        console.log("ArrowRight");
         alert('Swipe right');
       } else {
         updateGame("ArrowLeft");
