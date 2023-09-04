@@ -1,6 +1,8 @@
-/* :root{
-    --primary-color:rgb(255, 214, 153):
-} */
+:root{
+    --tilecolor1:red;
+    --tilecolor2:rgb(255, 196, 0);
+    --tilecolor3:purple;
+} 
 
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -11,11 +13,21 @@ hr {
     width: 50%;
 }
 
-#board{
+
+
+.game{
     width: 400px;
     height: 400px;
-    background-color: antiquewhite;
-    border: 5px solid rgb(255, 214, 153);
+    margin:0 auto;
+
+}
+
+
+#board{
+    width: 100%;
+    height: 100%;
+    background-color: hsl(30, 30%, 26%);
+    border: 5px solid hsl(30, 15%, 26%);
     margin:0 auto;
 
     display: flex;
@@ -25,72 +37,79 @@ hr {
 .tile {
     width: 90px;
     height: 90px;
-    border: 5px solid rgb(255, 214, 153);
+    border: 5px solid hsl(30, 15%, 26%);
     margin:auto;
-
+   
+    color: black;
     font-size: 40px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-}   
+}  
+
+.over {
+    background-color: rgba(130, 130, 130, 0.502);
+
+
+}
 
 .x2 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color:color-mix(in oklab, var(--tilecolor1) 10%, white );
+
 }
 
 .x4 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color:color-mix(in oklab, var(--tilecolor1) 20%, white );
+   
 }
 
 .x8 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color:color-mix(in oklab, var(--tilecolor1) 40%, white );
+    
 }
 
 .x16 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color:color-mix(in oklab, var(--tilecolor1) 60%, white );
+    color: white;
 }
 
 .x32 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color:color-mix(in oklab, var(--tilecolor1) 80%, white );
+    color: white;
 }
 
 .x64 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color: var(--tilecolor1);
+    color: white;
 }
 
 .x128 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color:color-mix(in oklab, var(--tilecolor2) 20%, white );
+   
 }
 
 .x256 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color:color-mix(in oklab, var(--tilecolor2) 40%, white );
+    
 }
 
 .x512 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color:color-mix(in oklab, var(--tilecolor2) 60%, white );
+    color: white;
 }
 
 .x1024 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color:color-mix(in oklab, var(--tilecolor2) 80%, white );
+    color: white;
 }
 
 .x2048 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color: var(--tilecolor2);
+    color: white;
 }
 
 .x4096 {
-    background-color: rgb(255, 159, 75);
-    color: aliceblue;
+    background-color: var(--tilecolor3);
+    color: white;
 }
