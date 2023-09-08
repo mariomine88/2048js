@@ -136,6 +136,13 @@ function reset(){
     setTwo();
 }
 
+function gameover(){
+    let menu = document.getElementById(state);
+    menu.className= "over";
+    menu.innerText = "Game Over";
+
+}
+
 function isboardempty (){
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++){
@@ -144,6 +151,7 @@ function isboardempty (){
             }
         }
     }
+    gameover();
     return false;
 }
 
@@ -206,3 +214,43 @@ function slide(row){
 function filterZero(row){
     return row.filter(num => num !== 0);
 } 
+
+
+
+let startX, startY, endX, endY;
+const threshold = 50; // Minimum distance required for a swipe
+
+document.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+});
+
+document.addEventListener('touchmove', (e) => {
+  endX = e.touches[0].clientX;
+  endY = e.touches[0].clientY;
+});
+
+document.addEventListener('touchend', () => {
+  const deltaX = endX - startX;
+  const deltaY = endY - startY;
+
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+    // Horizontal swipe
+    if (Math.abs(deltaX) >= threshold) {
+      if (deltaX > 0) {
+        updateGame('ArrowRight');
+      } else {
+        updateGame('ArrowLeft');
+      }
+    }
+  } else {
+    // Vertical swipe
+    if (Math.abs(deltaY) >= threshold) {
+      if (deltaY > 0) {
+        updateGame('ArrowDown');
+      } else {
+        updateGame('ArrowUp');
+      }
+    }
+  }
+});
