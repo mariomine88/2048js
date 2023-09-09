@@ -2,7 +2,7 @@
     "name": "2048",
     "short_name": "2048",
     "description": "A simple Progressive Web App for 2048",
-    "start_url": "/2048/",
+    "start_url": "/2048js/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#007bff",
