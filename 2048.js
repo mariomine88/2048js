@@ -1,4 +1,4 @@
-//test
+//test2
 
 var board = [
     [0,0,0,0],
